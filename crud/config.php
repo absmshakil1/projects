@@ -1,45 +1,12 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <?php
-session_start();
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbName = "project";
+$conn= mysqli_connect($servername,$username,$password,$dbName);
 
-// initializing variables
-$username = "";
-$email    = "";
-$errors = array(); 
+if(!$conn){
+    die("connection error:".mysqli_connect_error());
 
-// connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'projects');
-
-if ($db->connect_error) {
-    die("Connection failed: " . $db->connect_error);
 }
-
-
-
-$sql = "SELECT id, username, email, img FROM users";
-$result = $db->query($sql);
-
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        print "<br> id: ". $row["id"]. "<br> - Name: ". $row["username"]. "<br> - Email: " . $row["email"] . "<br>";
-      print "<img src=\"".$row["img"]."\">";
-     
-    }
-} else {
-    print "0 results";
-}
-
-
-
-$db->close();   
-        ?> 
-
-
-
-</body>
-</html>
+?>
