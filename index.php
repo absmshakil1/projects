@@ -50,7 +50,7 @@
                </div>
                <div class="mb-3">
                    Products Image
-                <input type="file" class="form-control" name="pass"placeholder="Enter email">
+                <input type="file" class="form-control" name="image"placeholder="Enter email">
 
                </div>
                 
