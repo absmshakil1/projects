@@ -37,7 +37,7 @@
        <div class="row justify-content-center">
            <div class="col-lg-4 col-md-6 col-sm-12">
             <form action="insert.php" method="post" enctype="multitype/form-data">
-                <h1>Login</h1>
+                <h1>Crud Operation</h1>
                <div class="mb-3">
                    ProductName
                 <input type="text" class="form-control"  name="UserName"placeholder="Enter email">
